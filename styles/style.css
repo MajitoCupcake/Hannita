@@ -21,6 +21,8 @@ body {
     font-family: 'Playfair Display', serif;
     color: var(--malva-principal);
     font-size: calc(1.8rem + 1.5vw); /* Tamaño fluido para móvil */
+        opacity: 1.0; /* Ajusta la transparencia si quieres que sea sutil */
+
 }
 
 .event-label {
@@ -107,6 +109,13 @@ body {
     border-radius: 20px; /* Entre más alto el número, más redonda la esquina */
     
     /* OPCIONAL: Un borde suave lila para que combine */
-    border: 2px solid #e0d5e8;
+    border: 4px solid #e0d5e8;
     object-fit: cover; /* Evita que la imagen se deforme si no es cuadrada */
+}
+
+audio {
+    filter: sepia(20%) hue-rotate(240deg) saturate(70%); /* Le da un tono lila/morado */
+    width: 250px;
+    height: 35px;
+    opacity: 0.8;
 }

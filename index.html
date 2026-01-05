@@ -30,11 +30,11 @@
                             <h1 class="main-title mb-0">Hanna Islas Vargas</h1>
                             <p class="event-label mb-4">Mis XV años</p>
                         </header>
-                                                <div class="divider mx-auto my-4"></div>
+                        <div class="divider mx-auto my-4"></div>
 
-                            <div class="hanita">
-                                <img src="asseets/hannita.jpg" class="rounded-4" alt="decoracion">
-                            </div>
+                        <div class="hanita">
+                            <img src="asseets/hannita.jpg" class="rounded-4" alt="decoracion">
+                        </div>
                         <div class="divider mx-auto my-4"></div>
 
                         <section class="event-info">
@@ -67,7 +67,7 @@
                                     CONFIRMA AQUÍ TU ASISTENCIA
                                 </a>
                             </div>
-                                                    <div class="divider mx-auto my-4"></div>
+                            <div class="divider mx-auto my-4"></div>
 
                             <p class="mt-4 extra-info text-muted small">EVENTO BABY SHOWER • LIVERPOOL NO. 51023720</p>
                         </footer>
@@ -77,12 +77,34 @@
                         <img src="asseets/butterfly.png" alt="decoracion">
                     </div>
                 </div>
+                <div class="container text-center mt-3">
+                    <audio id="musicaFondo" loop>
+    <source src="asseets/Cree y atravete.mp3" type="audio/mpeg">
+</audio>
+                </div>
 
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Función para iniciar la música
+    function iniciarMusica() {
+        const audio = document.getElementById('musicaFondo');
+        audio.play().catch(error => {
+            console.log("El navegador bloqueó el autoplay inicial, esperando interacción.");
+        });
+        
+        // Removemos los eventos una vez que la música empieza para no saturar
+        document.removeEventListener('click', iniciarMusica);
+        document.removeEventListener('touchstart', iniciarMusica);
+    }
+
+    // Escucha un clic o un toque en el celular
+    document.addEventListener('click', iniciarMusica);
+    document.addEventListener('touchstart', iniciarMusica);
+</script>
 </body>
 
 </html>
