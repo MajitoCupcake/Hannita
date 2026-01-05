@@ -113,9 +113,20 @@ body {
     object-fit: cover; /* Evita que la imagen se deforme si no es cuadrada */
 }
 
-audio {
-    filter: sepia(20%) hue-rotate(240deg) saturate(70%); /* Le da un tono lila/morado */
-    width: 250px;
-    height: 35px;
-    opacity: 0.8;
+/* Pantalla de inicio que cubre todo */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9b76aa; /* Color malva principal */
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    transition: opacity 1s ease, visibility 1s;
+}
+
+/* Clase para ocultar el telón con efecto de desvanecimiento */
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
 }
