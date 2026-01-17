@@ -130,3 +130,12 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+.frases
+{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: black;
+    font-style: bold;
+    text-align: center;
+    margin: 20px;   
+}
