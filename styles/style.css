@@ -92,6 +92,15 @@ body {
     left: 10px; 
     transform: rotate(-15deg); 
 }
+/* Alineación solo a la derecha */
+.middle-right {
+    right: 20px;           /* Separación del borde derecho */
+    transform: translateY(-50%) rotate(10deg); /* La centra verticalmente y rota un poco */
+}
+.middle-left {
+    left: 10px;           /* Separación del borde derecho */
+    transform: translateY(-50%) rotate(10deg); /* La centra verticalmente y rota un poco */
+}
 .top-right { top: 20px; right: 20px; transform: rotate(15deg); }
 .bottom-left { bottom: 20px; left: 20px; transform: rotate(-15deg); }
 
