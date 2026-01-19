@@ -108,8 +108,7 @@ body {
     /* ESQUINAS REDONDEADAS */
     border-radius: 20px; /* Entre más alto el número, más redonda la esquina */
     
-    /* OPCIONAL: Un borde suave lila para que combine */
-    border: 4px solid #e0d5e8;
+    border: 4px solid #7c91c0;
     object-fit: cover; /* Evita que la imagen se deforme si no es cuadrada */
 }
 
@@ -133,9 +132,9 @@ body {
 .frases
 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: black;
     font-style: bold;
     text-align: center;
-    margin: 20px;   
+    margin: 15px;   
 }
