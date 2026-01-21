@@ -141,9 +141,20 @@ body {
 .frases
 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
+    font-size: 1.03rem;
     color: black;
     font-style: bold;
     text-align: center;
     margin: 15px;   
+}
+
+#countdown {
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace; /* Estilo tipo reloj */
+    background: #f8f9fa;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+   color: var(--malva-oscuro);
 }

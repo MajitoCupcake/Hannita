@@ -48,7 +48,7 @@
                         <div class="decoration-img">
                             <img src="asseets/fly.png" alt="decoracion">
                         </div>
-                        <p class="frases">Con la bendición de Dios.</p>
+                        <p class="frases">Con la bendición de Dios, el amor de mis padres y mi familia.</p>
                         <div class="hanita">
                             <img src="asseets/hannita.jpg" class="rounded-4" alt="decoracion">
                         </div>
@@ -93,9 +93,9 @@
                                             <img src="asseets/flowers.png" alt="decoracion">
                                         </div>Mis padres
                                     </span>
-                                    <span class="d-block text-muted fw-bold" style="font-size: 110%;"">Miriam Vargas Hernández</span>
+                                    <span class="d-block text-muted fw-bold" style="font-size: 90%;"">Miriam Vargas Hernández</span>
                                     <span class=" d-block fs-5 text-muted fw-bold">&</span>
-                                    <span class="d-block text-muted fw-bold" style="font-size: 110%;">Julio Cesár Islas Vargas</span>
+                                    <span class="d-block text-muted fw-bold" style="font-size: 90%;">Julio Cesár Islas Vera</span>
                                 </div>
                             </div>
                             <div class="row g-0 border-top border-bottom py-3 mb-4 date-row align-items-center">
@@ -106,9 +106,9 @@
                                     <div class="decoration-img middle-left">
                                         <img src="asseets/fly.png" alt="decoracion">
                                     </div>
-                                    <span class="d-block text-muted fw-bold" style="font-size: 110%;">Flor Hernández Fernández</span>
+                                    <span class="d-block text-muted fw-bold" style="font-size: 90%;">Flor Hernández Fernández</span>
                                     <span class="d-block fs-5 text-muted fw-bold">&</span>
-                                    <span class="d-block text-muted fw-bold" style="font-size: 110%;">Isaac Factor Leoporoswki</span>
+                                    <span class="d-block text-muted fw-bold" style="font-size: 90%;">Isaac Factor Leoporoswki</span>
                                 </div>
                             </div>
                             <div class="hanita">
@@ -191,6 +191,12 @@
                         <img src="asseets/HannitaEscalera.jpg" width="50%" class="rounded-4" alt="decoracion">
                         <div class="divider mx-auto my-4"></div>
                     </div>
+                    <div class="countdown-container text-center py-5">
+    <h3 class="text-muted fw-bold color: #7c91c0">Faltan:</h3>
+    <div id="countdown" class="cuenta">
+        00d 00h 00m 00s
+    </div>
+</div>
                     <div class="container text-center mt-3">
                         <audio id="musicaFondo" loop>
                             <source src="asseets/Cree y atravete.mp3" type="audio/mpeg">
@@ -219,6 +225,32 @@
                 }, 1000);
             }
         </script>
+        <script>
+    // Configura la fecha objetivo (Año Nuevo 2026)
+    const countDownDate = new Date("March 21, 2026 17:00:00").getTime();
+
+    // Actualiza el contador cada 1 segundo
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        // Cálculos de tiempo para días, horas, minutos y segundos
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Muestra el resultado en el elemento con id="countdown"
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // Si la cuenta regresiva termina, escribe un mensaje
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "¡FELIZ AÑO NUEVO!";
+        }
+    }, 1000);
+</script>
 </body>
 
 </html>
